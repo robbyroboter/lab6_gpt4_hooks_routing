@@ -15,11 +15,14 @@ export const BlogItemLarge = ({ blog__item__large }) => {
           <img src={src} alt={alt}/>
         </div>
         <div className="text">
-          <p className="p text__blog">{text}</p>
-          <h3 className="h3 big__text__blog">{header}</h3>
+            <p className="p text__blog">{text}</p>
+            <h3
+                className="h3 big__text__blog"
+                dangerouslySetInnerHTML={{__html: header}}
+            />
         </div>
         <div className="bottom__text">
-          <a className="a text__blog" href="/happensBlog">Читать полную статью</a>
+            <a className="a text__blog" href="/happensBlog">Читать полную статью</a>
         </div>
     </div>
         </>
@@ -36,7 +39,10 @@ export const BlogSmall = ({ item }) => {
                 </div>
                 <div className="text">
                     <p className="p text__blog">{text}</p>
-                    {header}
+                    <h3
+                        className="h3 big__text__blog"
+                        dangerouslySetInnerHTML={{__html: header}}
+                    />
                 </div>
                 <div className="bottom__text">
                     <a className="a text__blog" href="/happensBlog">Читать полную статью</a>

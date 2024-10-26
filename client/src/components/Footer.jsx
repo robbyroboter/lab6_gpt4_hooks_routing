@@ -24,16 +24,17 @@ export const Image = ({ image: { alt, src } }) => (
 export const Gpt3 = ({item}) => {
     const {text}=item
     return (
-    <div className="external__text">
-        {text}
-    </div>
+        <div
+            className="external__text"
+            dangerouslySetInnerHTML={{__html: text}}
+        />
     );
 };
 
-export const Ssilki=({item})=>{
-    const {href, title}=item
+export const Ssilki = ({item}) => {
+    const {href, title} = item
     return (
-    <div className="external__text">
+        <div className="external__text">
         <a href={href}>{title}</a>
     </div>
 );
@@ -51,13 +52,14 @@ export const Company=({item})=>{
 export const Contacts = ({item}) => {
     const {text}=item
     return (
-        <div className="external__text">
-            {text}
-        </div>
+        <div
+            className="external__text"
+            dangerouslySetInnerHTML={{__html: text}}
+        />
     );
 };
 
-export const RealGpt3 = ({ gpt3 }) => {
+export const RealGpt3 = ({gpt3}) => {
     return gpt3.map((item, index) => (
         <Gpt3 key={index} item={item} />
     ));

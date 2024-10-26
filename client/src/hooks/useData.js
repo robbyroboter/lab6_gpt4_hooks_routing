@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const defaultUrl = "http://localhost:5000/api/cms/";
+const defaultUrl = "http://localhost:5001/api/cms/";
 
 const controller = new AbortController();
 const signal = controller.signal;
